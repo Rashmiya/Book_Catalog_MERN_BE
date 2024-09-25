@@ -4,7 +4,7 @@ import multer from 'multer';
 
 const storage = multer.diskStorage({
   destination: function(req, file, cb) {
-    cb(null, '/Users/user2/Developer/IJSE-MERN-Book-Store/book_catalog_ui/public/uploads');
+    cb(null, '/Users/rashm/OneDrive/Documents/Developer/VsCode-Workspace/Projects/Book/Book_Catalog_FE_MERN/public/uploads');
   },
   filename: function(req, file, cb) {
     cb(null, file.originalname);
