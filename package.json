@@ -4,10 +4,10 @@
   "description": "example API",
   "main": "app.ts",
   "scripts": {
+    "start": "node dist/app.js",
+    "build": "tsc",
     "test": "echo \"Skipping tests\"",
-    "start": "node ./app.ts",
-    "dev": "ts-node-dev app.ts",
-    "build": "tsc"
+    "dev": "ts-node-dev app.ts"
   },
   "author": "rashmiya",
   "license": "ISC",
