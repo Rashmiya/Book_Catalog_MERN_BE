@@ -10,7 +10,7 @@ import customerRoute from './src/routes/customerRoute';
 import cookieParser from 'cookie-parser';
 
 dotenv.config();
-const port = process.env.PORT;
+const port = process.env.PORT || 3000;
 const MONGODB_URI = process.env.MONGODB_URI;
 
 app.use(express.json());
@@ -18,7 +18,8 @@ app.use(cookieParser());
 
 app.use(cors({
   credentials: true, 
-  origin: 'http://localhost:3000' }));
+  origin: process.env.CLIENT_ORIGIN || 'http://localhost:3000'
+}));
   
 app.use(express.urlencoded({ extended: true }));
 
